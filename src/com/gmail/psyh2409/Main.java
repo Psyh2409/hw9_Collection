@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Task 1");
-        String pathToDir = "D:" + File.separator + "java" + File.separator + "test";
+        String pathToDir = "E:" + File.separator + "example";
         DocFiles docFiles = new DocFiles(pathToDir);
         System.out.println("All files in folder '"+pathToDir+"':");
         filesFactory(pathToDir, 4, "doc", "doc");
@@ -20,6 +20,9 @@ public class Main {
         System.out.println();
         System.out.println("List of '*.doc' files:");
         printFiles(docFiles.findFiles("doc"));
+        docFiles.copyFiles(
+                new File("E:" + File.separator + "Psyh" + File.separator + "java" + File.separator + "someFolder"),
+                        docFiles.findFiles("doc"));
         System.out.println();
 
         System.out.println("Task 2");

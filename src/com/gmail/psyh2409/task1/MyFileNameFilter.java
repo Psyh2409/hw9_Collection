@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 
 public class MyFileNameFilter implements FilenameFilter {
-    String extension;
+    private String extension;
 
     public MyFileNameFilter(String extension) {
         super();
